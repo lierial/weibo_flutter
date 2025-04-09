@@ -1,14 +1,18 @@
+
 import 'package:flunote/Apis/Request.dart';
 
 import '../Model/User.dart';
 
 class UserApi{
   static UserApi? _instance;
-  static UserApi get instance => _instance ?? UserApi._();
-  factory UserApi() => instance;
-  UserApi._();
+  static int uid = 0;
+  factory UserApi() => _instance ?? UserApi._();
+  UserApi._(){
+    _instance = this;
+  }
 
-  Future<User> getUserById(int uid)async{
+
+  Future<User> getUserById()async{
     var result = await Request().request("/user/get/$uid");
     return User.fromJson(result["data"]);
   }
@@ -34,4 +38,25 @@ class UserApi{
     return result;
   }
 
+  Future getFollowersByUser()async{
+    dynamic result = await Request().request("/user/follower/$uid");
+    return result;
+  }
+
+  Future getFolloweesByUser()async{
+    dynamic result = await Request().request("/user/followee/$uid");
+    return result;
+  }
+
+  Future followUser(int fid)async{
+    await Request().request("/user/follow/add",methods: Methods.POST,params: {
+      "uid":uid,"fid":fid
+    });
+  }
+
+  Future disFollowUser(int fid)async{
+    await Request().request("/user/follow/delete",methods: Methods.POST,params: {
+      "uid":uid,"fid":fid
+    });
+  }
 }

@@ -1,8 +1,8 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flunote/Apis/UserApi.dart';
 import 'package:flunote/ViewModel/UserViewModel.dart';
-import 'package:flunote/Views/Widgets/ComButton.dart';
-import 'package:flunote/Views/Widgets/InputField.dart';
+import 'package:flunote/Widgets/ComButton.dart';
+import 'package:flunote/Widgets/InputField.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

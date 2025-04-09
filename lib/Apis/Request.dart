@@ -12,9 +12,7 @@ class Request{
   Request._(){
     _instance = this;
     _dio = Dio(BaseOptions(
-        baseUrl: "http://192.168.0.115:8080",
-        connectTimeout: const Duration(seconds: 5),
-        receiveTimeout: const Duration(seconds: 5)
+        baseUrl: "http://192.168.0.106:8080",
     ));
     _dio.interceptors.add(InterceptorsWrapper(
       onRequest: _onRequest,onError: _onError,onResponse: _onResponse

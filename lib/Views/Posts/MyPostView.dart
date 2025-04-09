@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class VideoView extends StatelessWidget {
-  const VideoView({super.key});
+class MyPostView extends StatelessWidget {
+  const MyPostView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: const Text("VideoView")),
+      body: Center(child: const Text("Hello")),
     );
   }
 }

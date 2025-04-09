@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class WeiboButton extends StatelessWidget {
   const WeiboButton({super.key,required this.onPressed,required this.label,required this.icon, this.color});
   final Function() onPressed;
-  final String label;
+  final String? label;
   final IconData icon;
   final Color? color;
 
@@ -16,7 +16,7 @@ class WeiboButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FaIcon(icon,size: 15,color: color,),
-          Text("  $label",style: TextStyle(color: color),)
+          Text("  ${label??""}",style: TextStyle(color: color),)
         ],
       ),
     );

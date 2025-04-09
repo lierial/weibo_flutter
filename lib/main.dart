@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       title: 'Flutter Demo',
       builder: BotToastInit(),
@@ -47,7 +45,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(fontSize: 12),
           bodySmall: TextStyle(fontSize: 10)
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           toolbarHeight: 32

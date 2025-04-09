@@ -8,11 +8,12 @@ class User{
   int follows = 0;
   int posts = 0;
   int fans = 0;
+  bool followed;
 
-  User(this.id,this.name,this.bio,this.avatar,this.created,this.account, {this.follows = 0,this.posts=0,this.fans=0});
+  User(this.id,this.name,this.bio,this.avatar,this.created,this.account,this.followed, {this.follows = 0,this.posts=0,this.fans=0});
 
   factory User.fromJson(dynamic maps) {
-    return User(maps["id"], maps["name"], maps["bio"], maps["avatar"], maps["created"], maps["account"],
+    return User(maps["id"], maps["name"], maps["bio"], maps["avatar"], maps["created"], maps["account"],maps["followed"],
         follows: maps["follows"]??0,posts: maps["posts"]??0,fans: maps["fans"]??0);
   }
 

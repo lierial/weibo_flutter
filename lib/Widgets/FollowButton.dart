@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FollowButton extends StatelessWidget {
-  const FollowButton({super.key,required this.onPressed});
+  const FollowButton({super.key,required this.onPressed, required this.isFollowed});
   final Function() onPressed;
+  final bool isFollowed;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class FollowButton extends StatelessWidget {
       ),
       child:InkWell(
         onTap: onPressed,
-        child: const Padding(padding: EdgeInsets.fromLTRB(12, 6, 12, 6),child: Text("关注"),),
+        child: Padding(padding:const EdgeInsets.fromLTRB(12, 6, 12, 6),child: Text(isFollowed?"已关注":"  关注  "),),
       ),
     );
   }
