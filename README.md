@@ -2,6 +2,8 @@
 
 Weibo_Flutter是一款基于Flutter框架模仿【微博】的跨平台APP
 
+【[后端项目](https://github.com/lierial/weibo_springb2)】使用Java+SpringBoot实现
+
 ### 截图
 
 ![主页截图](https://raw.githubusercontent.com/lierial/weibo_flutter/main/readme/img(1).png)
